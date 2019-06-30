@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F47D9D2-B85B-41F8-A87C-0EE794D9B36B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Lol_AutoRecorder</RootNamespace>
+    <AssemblyName>Lol AutoRecorder</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.7.0.7, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.7.0.7\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="LoadingIndicator.WinForms, Version=1.0.3.0, Culture=neutral, PublicKeyToken=1b7ed145d0f47614, processorArchitecture=MSIL">
+      <HintPath>..\packages\LoadingIndicator.WinForms.1.0.3\lib\net45\LoadingIndicator.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.3.3, Culture=neutral, PublicKeyToken=8985beaab7ea3f04, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft-WindowsAPICodePack-Core.1.1.3.3\lib\net452\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.3.3, Culture=neutral, PublicKeyToken=8985beaab7ea3f04, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft-WindowsAPICodePack-Shell.1.1.3.3\lib\net452\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Logging, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Logging.3.3.0\lib\net45\Ninject.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Logging.Log4net, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Logging.Log4net.3.3.0\lib\net45\Ninject.Extensions.Logging.Log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.8\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.6.9.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.6.9\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\Error.cs" />
+    <Compile Include="Exceptions\CheckForUnprocessedFilesException.cs" />
+    <Compile Include="Exceptions\LeagueClientLauncherException.cs" />
+    <Compile Include="Exceptions\PlayerIdProviderException.cs" />
+    <Compile Include="Exceptions\StringToScreenModeMapperException.cs" />
+    <Compile Include="Constants\Info.cs" />
+    <Compile Include="IoC\DependenciesModule.cs" />
+    <Compile Include="Processors\KnownFolders.cs" />
+    <Compile Include="Interfaces\IStringToScreenModeMapper.cs" />
+    <Compile Include="Mappings\StringToScreenModeMapper.cs" />
+    <Compile Include="Interfaces\IRecordingCancellationManager.cs" />
+    <Compile Include="Interfaces\IScreenModeOperator.cs" />
+    <Compile Include="Processors\RecordingCancellationManager.cs" />
+    <Compile Include="Exceptions\RecordingProviderException.cs" />
+    <Compile Include="Exceptions\ReplayPlaybackProviderException.cs" />
+    <Compile Include="Exceptions\RestRepositoryException.cs" />
+    <Compile Include="Exceptions\UnprocessedFilesMonitorException.cs" />
+    <Compile Include="LolAutoRecorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LolAutoRecorder.Designer.cs">
+      <DependentUpon>LolAutoRecorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LolReplay.cs" />
+    <Compile Include="Interfaces\IParticipantIdToInitializerMapper.cs" />
+    <Compile Include="Mappings\ParticipantIdToInitializerMapper.cs" />
+    <Compile Include="Interfaces\ILeagueClientLauncher.cs" />
+    <Compile Include="Interfaces\IProgressBarOperator.cs" />
+    <Compile Include="Interfaces\IUnprocessedFilesMonitor.cs" />
+    <Compile Include="Processors\LeagueClientLauncher.cs" />
+    <Compile Include="Processors\ProgressBarOperator.cs" />
+    <Compile Include="Processors\ScreenModeOperator.cs" />
+    <Compile Include="Processors\UnprocessedFilesMonitor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Interfaces\IPlayerIdProvider.cs" />
+    <Compile Include="Interfaces\IRecordingProvider.cs" />
+    <Compile Include="Interfaces\IReplayPlaybackProvider.cs" />
+    <Compile Include="Providers\RecordingProvider.cs" />
+    <Compile Include="Providers\ReplayPlaybackProvider.cs" />
+    <Compile Include="Interfaces\IReplayRepository.cs" />
+    <Compile Include="Interfaces\IRestRepository.cs" />
+    <Compile Include="Providers\PlayerIdProvider.cs" />
+    <Compile Include="Wrappers\PlayerIdProviderResult.cs" />
+    <Compile Include="Repositories\ReplayRepository.cs" />
+    <Compile Include="Repositories\RestRepository.cs" />
+    <Compile Include="Enums\ScreenMode.cs" />
+    <Compile Include="Enums\TeamChaosOrder.cs" />
+    <Compile Include="Constants\Warn.cs" />
+    <Compile Include="Interfaces\IInputOutputWrapper.cs" />
+    <Compile Include="Wrappers\InputOutputWrapper.cs" />
+    <EmbeddedResource Include="LolAutoRecorder.resx">
+      <DependentUpon>LolAutoRecorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config-colored-console-appender.xml.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LolAutoRecorder.CommonLibrary\LolAutoRecorder.CommonLibrary.csproj">
+      <Project>{C308EB33-87FC-4B6E-B6D7-F2142C8B7221}</Project>
+      <Name>LolAutoRecorder.CommonLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LolAutoRecorder.Model\LolAutoRecorder.Model.csproj">
+      <Project>{25A8D754-120E-4EDE-AE55-5701547CE38A}</Project>
+      <Name>LolAutoRecorder.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
